@@ -1,0 +1,12 @@
+{
+  "name": "meridian-wedding",
+  "version": "0.0.1",
+  "description": "A wedding webpage for Alex & Mads Meridian",
+  "main": "index.html",
+  "scripts": {
+    "watch": "browser-sync start -sw"
+  },
+  "author": "Alex Meridian",
+  "license": "ISC",
+  "private": "true"
+}
