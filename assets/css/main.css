@@ -2653,6 +2653,40 @@ input, select, textarea {
 				padding-right: 0 !important;
 			}
 
+	a span.icon {
+		border-color: black;
+		background-color: #009496;
+		border-radius: 100%;
+		border: solid 1px;
+		border-color: rgba(255, 255, 255, 0.35);
+		display: inline-block;
+		border: solid 1px;
+		border-radius: 100%;
+	}
+
+	a:has(span.icon) {
+		border-bottom: none;
+		display: inline-grid;
+	}
+
+		a:hover span.icon {
+			background-color: rgba(255, 255, 255, 0.075);
+		}
+
+		a:active span.icon {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+
+		span.icon img {
+			display: block;
+			font-size: 1.25em;
+			width: 4em;
+			height: 4em;
+			text-align: center;
+			line-height: 4em;
+			margin: 1em;
+		}
+
 /* Section/Article */
 
 	section.special, article.special {
