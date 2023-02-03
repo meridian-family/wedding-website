@@ -10,13 +10,31 @@
 		var $body = $('body'), $main = $('#main');
 
 		// Breakpoints.
-		breakpoints({
-			xlarge: ['1281px', '1680px'],
-			large: ['981px', '1280px'],
-			medium: ['737px', '980px'],
-			small: ['481px', '736px'],
-			xsmall: ['361px', '480px'],
-			xxsmall: [null, '360px']
+		Breakpoints({
+			xlarge: { min: 1281, max: 1680 },
+			large: { min: 981, max: 1280 },
+			medium: { min: 737, max: 980 },
+			small: { min: 481, max: 736 },
+			xsmall: { min: 361, max: 480 },
+			xxsmall: { min: 0, max: 360 }
+		});		
+
+		Breakpoints.on('xlarge large medium', {
+			enter: function(){
+				$('iframe').prop('height', 450).prop('width', 600);
+			}
+		});	
+
+		Breakpoints.on('small', {
+			enter: function(){
+				$('iframe').prop('height', 360).prop('width', 360);
+			}
+		});	
+
+		Breakpoints.on('xsmall xxsmall', {
+			enter: function(){
+				$('iframe').prop('height', 240).prop('width', 240);
+			}
 		});
 
 		// Play initial animations on page load.
@@ -24,12 +42,6 @@
 			$body.removeClass('is-preload');
 		}, 100);
 
-		var $section = $("#rsvp");
-		$section.scrollex({
-			scroll: function(progress){
-				console.log(progress);
-			}
-		})
 		// Nav.
 		var $nav = $('#nav');
 
