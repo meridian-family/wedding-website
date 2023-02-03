@@ -2686,6 +2686,32 @@ input, select, textarea {
 			line-height: 4em;
 			margin: 1em;
 		}
+	
+		@media screen and (max-width: 736px) {
+			span.icon img {
+				font-size: 1.125em;
+				width: 3.5em;
+				height: 3.5em;
+			}
+		}
+	
+		@media screen and (max-width: 480px) {
+			span.icon img {
+				font-size: 1em;
+				width: 3.125em;
+				height: 3.125em;
+			}
+		}
+	
+		@media screen and (max-width: 360px) {
+			span.icon img {
+				font-size: 1em;
+				width: 3em;
+				height: 3em;
+			}
+		}
+
+
 
 /* Section/Article */
 
