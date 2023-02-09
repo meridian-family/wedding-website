@@ -8,14 +8,15 @@
 */
 
 :root {
+	--accent-color: #009496;
 	--bg-angle: -135deg;
 	--bg-start-color: #009496;
 	--bg-start-color-stop: 10%;
 	--bg-end-color: #000000;
 	--bg-end-color-stop: 90%;
-	--underline-gradient-color-1: #009496;/*#f5a9b8;*/ /*#efa8b0;*/
-	--underline-gradient-color-2: #009496;/*#ffffff;*/ /*#a89cc8;*/
-	--underline-gradient-color-3: #009496;/*#5bcefa;*/ /*#8cc9f0;*/
+	--underline-gradient-color-1: var(--accent-color);/*#f5a9b8;*/ /*#efa8b0;*/
+	--underline-gradient-color-2: var(--accent-color);/*#ffffff;*/ /*#a89cc8;*/
+	--underline-gradient-color-3: var(--accent-color);/*#5bcefa;*/ /*#8cc9f0;*/
 	--text-color: #f8f2ef;/*#636363;*/
 	--nav-bg-color: #636363;/*#f7f7f7;*/
 	--nav-alt-bg-color: rgba(99,99,99,0.95);
@@ -2655,7 +2656,7 @@ input, select, textarea {
 
 	a span.icon {
 		border-color: black;
-		background-color: #009496;
+		background-color: var(--accent-color);
 		border-radius: 100%;
 		border: solid 1px;
 		border-color: rgba(255, 255, 255, 0.35);
@@ -3158,12 +3159,12 @@ input, select, textarea {
 		background-color: var(--header-bg-color);
 		background-image: url("../../images/Engagement-44-4x3.jpg");
 		background-position-x: center;
+		text-shadow: 0 0 1em var(--accent-color), 0 0 1em var(--accent-color);
 		/**
 		background-image: url("images/overlay.png"), url("../../images/Engagement-44-4x3.jpg");
 		background-attachment: fixed;
 		background-position-x: center;
-		background-position-y: top;
-		text-shadow: 1px 1px 15px #000000;**/
+		background-position-y: top;**/
 	}
 /*
 	#header:before {
