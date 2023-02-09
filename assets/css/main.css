@@ -60,15 +60,6 @@ ol, ul {
 	list-style: none;
 }
 
-blockquote, q {
-	quotes: none;
-}
-
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -275,11 +266,25 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 4px;
 		font-style: italic;
-		margin: 0 0 2em 0;
-		padding: 0.5em 0 0.5em 2em;
 	}
+
+	blockquote, figure:has(blockquote) {
+		border-left: solid 4px var(--accent-color);
+		margin: 0 0 2em 0;
+		padding: 0.5em 0 0.5em 1em;
+	}
+
+	figure > blockquote {
+		border-left: initial;
+		margin: initial;
+		padding: initial;
+	}
+
+	figure:has(blockquote) > figcaption {
+		font-size: 0.75em;
+	}
+	
 
 	code {
 		border-radius: 8px;
@@ -340,10 +345,6 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
-	}
-
-	blockquote {
-		border-left-color: rgba(255, 255, 255, 0.35);
 	}
 
 	code {
@@ -3383,10 +3384,6 @@ input, select, textarea {
 			color: var(--text-color);
 		}
 
-		#nav blockquote {
-			border-left-color: #dddddd;
-		}
-
 		#nav code {
 			background: rgba(222, 222, 222, 0.25);
 			border-color: #dddddd;
@@ -3494,10 +3491,6 @@ input, select, textarea {
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
 			color: var(--text-color);
-		}
-
-		#main blockquote {
-			border-left-color: #dddddd;
 		}
 
 		#main code {
