@@ -1,5 +1,16 @@
 @import url(fontawesome-all.min.css);
-@import 'https://fonts.googleapis.com/css?family=Permanent+Marker:300,400';
+
+@font-face {
+	font-family: "Permanent Marker";
+	src: url("../webfonts/PermanentMarker-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Segoe Print";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Segoe Print"), url("../webfonts/Segoe Print.woff") format('woff');
+}
 
 /*
 	Stellar by HTML5 UP
@@ -24,7 +35,7 @@
 	--h-font-weight: 500; /* 300 */
 	--header-text-color: #000000;
 	--header-bg-color: rgba(0,0,0,0);
-	--font-family: "Arial";/*"Source Sans Pro";*/
+	--font-family: "Segoe Print";
 	--header-font-family: "Permanent Marker";
 }
 
@@ -139,7 +150,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: var(--font-family), Helvetica, sans-serif;
+		font-family: var(--font-family), Arial, Helvetica, sans-serif;
 		font-size: 17px;
 		font-weight: var(--font-weight);
 		line-height: 1.65;
