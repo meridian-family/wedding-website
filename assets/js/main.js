@@ -4,6 +4,17 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+function checkboxToggleFor(){
+	var $this = $(this);
+	var $for = $("#"+$this.data("for"));
+	$for.attr("disabled", !this.checked);
+}
+function checkboxToggleCascade(){
+	var $this = $(this);
+	var $cascade = $("#"+$this.data("cascade"));
+	$cascade.attr("disabled", !this.checked);
+}
+
 (function($) {
 	$(() => {
 
@@ -134,5 +145,19 @@
 			speed: 1000
 		});
 
+		// TODO: highlight invalid inputs
+
+		$("#rsvp_form input[data-for]").each(checkboxToggleFor).change(checkboxToggleFor);
+
+		$("#rsvp_form input[data-cascade]").each(checkboxToggleCascade).change(checkboxToggleCascade);
+
+		$("#rsvp_dietary input[type='checkbox']").change(function() {
+			var checkboxes = $("#rsvp_dietary input[type='checkbox']");
+			checkboxes.attr("required", !checkboxes.is(":checked"));
+		});
+
+		$("#rsvp_dietary_other").change(function() {
+			$('#rsvp_dietary_other_response').attr("required", this.checked)
+		});
 	});
 })(jQuery);

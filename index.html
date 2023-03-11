@@ -192,10 +192,136 @@
 						<h2>RSVP</h2>
 					</header>
 					<section>
-						<p>Official invitations will be sent mid-March, and you can reply here.</p>
+						<p>
+							Please fill out the form below by April 14 to let us know if you'll be joining us on our special day.
+						</p>
+						<label class="align-center" style="color: red;">* Required</label>
+					</section>
+					<section class="box align-left">
+						<form id="rsvp_form" action="https://docs.google.com/forms/d/e/1FAIpQLSdNNmxazefLqEwsPuIIvbIYZLKW9Me_g0zf1m6RXTANqqQphg/formResponse" 
+							target="_blank" method="POST" >
+							<fieldset class="row align-center-xsmall">
+								<legend>
+									Guests - First & Last Names
+								</legend>
+								<div class="col-3 col-12-xsmall">
+									<label class="required" for="rsvp_name">Guest 1</label>
+								</div>
+								<div class="col-9 col-12-xsmall">
+									<input id="rsvp_name" name="entry.678636000" type="text" required/>
+								</div>
+								<div class="col-3 col-12-xsmall">
+									<label for="rsvp_guests">Additional Guests</label>
+								</div>
+								<div class="col-9 col-12-xsmall">
+									<input id="rsvp_guests" name="entry.1628167277" type="text"/>
+								</div>
+							</fieldset>
+							<fieldset>
+								<legend class="required">
+									Will you be joining us at 5pm on April 29 in Cleveland? 
+									Festivities will go through 11:30pm.
+								</legend>
+								<ul class="inline">
+									<li>
+										<input id="rsvp_attending_yes" name="entry.1867570660" type="radio" value="Yes" required/>
+										<label for="rsvp_attending_yes">Yes</label>
+									</li>
+									<li>
+										<input id="rsvp_attending_no" name="entry.1867570660" type="radio" value="No" required/>
+										<label for="rsvp_attending_no">No</label>
+									</li>
+								</ul>
+							</fieldset>
+							<fieldset id="rsvp_dietary">
+								<legend class="required">
+									For dinner, a create your own taco buffet will be provided by Cilantro Taqueria, 
+									do you have any food allergies or preferences we should know about? No seafood will be present.
+									(Check all boxes that apply to your party)
+								</legend>
+								<ul>
+									<li>
+										<input id="rsvp_dietary_meat" data-for="rsvp_dietary_meat_hidden" type="checkbox" required/>
+										<label for="rsvp_dietary_meat">Nope! Bring on all the meat</label>
+										<input id="rsvp_dietary_meat_hidden" type="hidden" name="entry.1200001224" value="Nope! Bring on all the meat" disabled/>
+									</li>
+									<li>
+										<input id="rsvp_dietary_vegetarian" data-for="rsvp_dietary_vegetarian_hidden" type="checkbox" required/>
+										<label for="rsvp_dietary_vegetarian">Vegetarian options please!</label>
+										<input id="rsvp_dietary_vegetarian_hidden" type="hidden" name="entry.1200001224" value="Vegetarian options please!" disabled/>
+									</li>
+									<li>
+										<input id="rsvp_dietary_vegan" data-for="rsvp_dietary_vegan_hidden" type="checkbox" required/>
+										<label for="rsvp_dietary_vegan">Vegan options please!</label>
+										<input id="rsvp_dietary_vegan_hidden" type="hidden" name="entry.1200001224" value="Vegan options please!" disabled/>
+									</li>
+									<div class="d-flex d-block-xsmall">
+										<li>
+											<input id="rsvp_dietary_other" data-for="rsvp_dietary_other_hidden" data-cascade="rsvp_dietary_other_response" type="checkbox" required/>
+											<label for="rsvp_dietary_other">Other:</label>
+											<input id="rsvp_dietary_other_hidden" type="hidden" name="entry.1200001224" value="__other_option__" disabled/>
+										</li>
+										<div class="flex-grow margin-top-1-xsmall">
+											<label for="rsvp_dietary_other_response" class="sr-only">Specify other dietary preferences</label>
+											<input id="rsvp_dietary_other_response" name="entry.1200001224.other_option_response" type="text"/>
+										</div>
+									</div>
+								</ul>
+							</fieldset>
+							<fieldset>
+								<legend class="required">
+									A negative COVID test will be required for entry. 
+									Tests will be provided for everyone regardless of vaccination status. 
+									Do you agree to share your recent COVID results at the door?
+								</legend>
+								<ul class="inline">
+									<li>
+										<input id="rsvp_covid_yes" name="entry.1503860242" type="radio" value="Yes" required/>
+										<label for="rsvp_covid_yes">Yes</label>
+									</li>
+									<li>
+										<input id="rsvp_covid_no" name="entry.1503860242" type="radio" value="No" required/>
+										<label for="rsvp_covid_no">No</label>
+									</li>
+								</ul>
+							</fieldset>
+							<fieldset>
+								<legend class="required">
+									Please note this is an adults-only reception with liquor and loud music. 
+									We encourage all parents to enjoy a night out partying with us!
+								</legend>
+								<ul><li>
+									<input id="rsvp_adults" data-for="rsvp_adults_hidden" type="checkbox" required/>
+									<label for="rsvp_adults">Thanks for letting me know</label>
+									<input id="rsvp_adults_hidden" type="hidden" name="entry.458097542" value="Thanks for letting me know" disabled/>
+								</li></ul>
+							</fieldset>
+							<fieldset>
+								<legend class="required">
+									Will you be drinking heavily? 
+									Consider <a href="booking.html">booking a discounted hotel room in our block</a>, 
+									and you'll receive a free ride to and from the venue so you don't have to worry about driving while you drink! 
+								</legend>
+								<ul><li>
+									<input id="rsvp_booking" data-for="rsvp_booking_hidden" type="checkbox" required/>
+									<label for="rsvp_booking">Thanks for letting me know</label>
+									<input id="rsvp_booking_hidden" type="hidden" name="entry.730956361" value="Thanks for letting me know" disabled/>
+								</li></ul>
+							</fieldset>
+							<fieldset>
+								<legend>
+									We appreciate you taking time to fill out this form.
+									Is there anything else you'd like to share with us?
+								</legend>
+									<label for="rsvp_other" class="sr-only">Additional Comments</label>
+									<input id="rsvp_other" name="entry.1172731181" type="text">
+							</fieldset>
+							<div class="align-center">
+								<button type="submit" class="primary">Submit</button>
+							</div>
+						</form>
 					</section>
 				</section>
-
 			</div>
 
 				<!-- Footer -->
